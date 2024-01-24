@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="loco.css">
+</head>
+<body>
+    <div id="main">
+        <div class="navbar">
+            <a href="#" class="logo">$Sparks Bank</a>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+                <li><a href="{{ url_for('customer')}}">Customer</a></li>
+                <li><a href="{{ url_for('history')}}">History</a></li>
+            </ul>
+        </div>
+        <div class="border"></div>  
+        <div class="first-page">
+            <div class="text1">
+                <h1>$Sparks Bank</h1>
+                <h4>Keep Your Money Safe</h4>
+            </div>
+            <div class="image">
+                <img src="/static/8953254.jpg" alt="" class="responsive-image">
+            </div>
+        </div>
+        <div class="border-middle"></div>
+        <div class="second-page">
+            
+            <div class="second-text">
+                <h2 style="color: rgb(52, 130, 255);">About Us</h2>
+                <p>Sparks Bank is a dynamic website project with the primary goal of creating a basic banking website to showcase transactions between customers. The website is constructed using HTML, CSS, JavaScript, Bootstrap, and MySQL for the backend. Click the button below to view customer details, select a customer to initiate a money transfer, and then proceed to the transaction page to complete the transaction.</p><br>
+                <a href="{{ url_for('customer')}}">View Customer</a>
+            </div>
+        </div>
+        <div class="border-last"></div><br>
+        <div class="footer">
+            <div class="footerleft">
+                <h5>Copyright @claim 2024</h5>
+            </div>
+            <h5>Thank You For Visiting</h5>
+            <div class="footerright">
+                <h5>Sparks Bank</h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    
+</body>
+</html>

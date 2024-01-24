@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(255, 254, 250, 0.942);
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3c8aff;
+    padding: 15px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #66c2ff;
+}
+
+.border {
+    border-bottom: 1.5px solid rgb(53, 140, 255);
+    margin-left: 4vh;
+    margin-right: 4vh;
+    margin-top: 0px;
+}
+
+.first-page {
+    display: flex;
+    align-items: start;
+    font-family: Arial;
+    line-height: 40px;
+    opacity: .8;
+    padding-top: 15vh;
+}
+
+.first-page h1 {
+    margin-left: 30vh;
+    font-size: 60px;
+    color: rgba(2, 138, 2, 0.681);
+}
+
+.first-page h4 {
+    padding-top: 1vh;
+    padding-left: 30vh;
+    margin-left: 30vh;
+}
+.img {
+    
+    text-align: right;
+    margin-top: 20px; /* Adjust as needed */
+   display: inline-block;
+    
+}
+
+.responsive-image {
+
+    max-width: 100%;
+    height: auto;
+    width: 500px;
+    margin-left: 20vh;
+    margin-bottom: -20vh;
+    padding-top: -15vh;
+
+ 
+}
+.border-middle {
+    border-bottom: 1.5px solid rgb(65, 157, 255);
+    margin-top: 150px;
+    margin-left: 4vh;
+    margin-right: 4vh;
+}
+
+.border-last {
+    border-bottom: 1.5px solid rgb(53, 144, 255);
+    margin-top: 50px;
+    margin-left: 4vh;
+    margin-right: 4vh;
+}
+
+.second-page {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    font-family: Arial;
+    color: rgb(0, 0, 0);
+}
+
+.second-text {
+    margin-left: 5vh;
+    margin-top: 20px;
+}
+
+
+.second-text a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(0, 98, 255);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.second-text p {
+    font-weight: 300;
+}
+
+.second-page img {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80vh;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    opacity: .9;
+}
+
+.second-text a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(1, 137, 255);
+    transition: .2s;
+    border: rgb(1, 137, 255);
+    padding: 1vh;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    opacity: .5;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    color: rgb(0, 0, 0);
+    opacity: .8;
+    font-family: Arial;
+    margin-top: -2.7vh;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+    }
+
+    .nav-links li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .first-page h1 {
+        margin-left: 8vh;
+        font-size: 40px;
+        
+    }
+
+    .first-page h4 {
+        margin-left: -23vh;
+      
+
+    }
+    .responsive-image{
+        margin-left: -5vh;
+        margin-top: 5vh;
+        height: auto;
+        width: 150px;
+        margin-bottom: -10vh;
+        margin-top: -0.5vh;
+    }
+
+    .second-page {
+        align-items: center;
+    }
+
+   
+}

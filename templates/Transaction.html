@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='transaction.css')}}">
+</head>
+<body>
+    <form id="transactionForm" action="{{ url_for('transaction', accountno=accountno, balance=balance) }}" method='POST'>
+    <div id="main">
+        <div id="main">
+            <div class="navbar">
+                <a href="#" class="logo">$Sparks Bank</a>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('index')}}">Home</a></li>
+                    <li><a href="{{ url_for('customer')}}">Customer</a></li>
+                    <li><a href="{{ url_for('history')}}">History</a></li>
+                </ul>
+            </div>
+            <div class="border">
+            </div>
+            
+            <div id="header">
+                <h2 style="color: green;">Transfer Money</h2>
+            </div>
+
+            <div class="all_inputs">
+                <div class="left-inputs">
+                    <label for="acc_num">Sender Account No.</label><br>
+                    <input type="number" value="{{ accountno }}" readonly="" name="acc_num" class="acc_num">
+                    <br><br>
+                    <label for="your_bal">Your Balance</label><br>
+                    <input type="number" value="{{ balance }}" readonly=""  class="your_bal">
+                    
+                </div>
+
+                <div class="right-inputs">
+                    <label for="to_account_no">Receiver Account no</label><br>
+                    <select name="to_account_no" class="to_account_no" title="Select Receiver Account">
+                        {% for account_num in account_numbers %}
+                        <option value="{{ account_num }}">{{ account_num }}</option>
+                        {% endfor %}
+                    </select>
+                    <br><br>
+                    <label for="amount">Amount</label><br>
+                    <input type="number" name="amount" required="" class="amount" placeholder="Enter Amount to transfer">
+                </div>
+                <div class="image">
+                    <img src="/static/9176210_6617.jpg" alt="" class="responsive-image"> 
+                </div>
+            </div>
+            
+
+            <div class="buttons">
+                <input type="submit" value="Transfer"  class="btn_submit">
+            </div>
+            
+            <div class="border-last">
+            </div><br>
+
+            <div class="footer">
+                <div class="footerleft">
+                    <h5>Copyright @claim 2024</h5>
+                </div>
+                <h5>Thank You For Visiting</h5>
+                <div class="footerright">
+                    <h5>Sparks Bank</h5>
+                </div>
+            </div>
+    </div>
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div id="flash-messages" class="container">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
